@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Zebra Printer</title>
+</head>
+<body>
+	<h1>Zebra Impresión</h1>	
+	
+	<form method="post" th:object="${printer}" th:action="@{/zebra}">
+	
+		<label>Dirección IP: </label>
+		<input type="text" name="ip" id="ip" />
+		<br />
+		<label>Puerto: </label>
+		<input type="text" name="puerto" id="puerto" />
+		<br />
+	
+		<button type="submit">Establecer Conexión</button>
+	</form>
+	
+	<p th:text="${resultado}"></p>
+	<p th:text="${printer_info}"></p>
+	
+</body>
+</html>
